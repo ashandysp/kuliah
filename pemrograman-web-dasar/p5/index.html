@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cobain table</title>
+  <style>
+    table {
+      border: 4px solid #000;
+      padding: 12px;
+    }
+
+    td {
+      border: 4px solid #000;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    tr:hover td {
+      background-color: brown;
+    }
+  </style>
+</head>
+<body>
+  <div id="main-table">
+    <table style="margin: 0 auto;">
+      <tbody>
+        <tr>
+          <td><span>1</span></td>
+          <td style="background-color: blue;"><span>2</span></td>
+          <td><span>3</span></td>
+        </tr>
+        <tr>
+          <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgEnsF-C5P8Jakj8R8ITtdmX9N3bWJPDL1t2Js9Sne5vWFm1VzRLbN7MvE&s=10" style="max-width: 200px;" /></td>
+          <td style="background-color: purple;"><span>5</span></td>
+          <td><span>6</span></td>
+        </tr>
+        <tr>
+          <td colspan="2"><span>7</span></td>
+          <td><span>8</span></td>
+        </tr>
+        <tr>
+          <td><span>9</span></td>
+          <td colspan="2"><span>10</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
