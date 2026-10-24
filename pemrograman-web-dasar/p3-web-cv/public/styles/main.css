@@ -633,10 +633,10 @@ button {
     place-items: center;
     width: 32px;
     height: 32px;
-    background: var(--color-placeholder);
+    /* background: var(--color-placeholder); */
     color: #000;
     font-size: 11px;
-    content: "img";
+    content: "";
   }
 
   .site-header__nav::before {
@@ -664,7 +664,7 @@ button {
 
   .hero__meta {
     justify-content: flex-end;
-    margin: -49px 0 28px;
+    margin: -80px 0 28px;
     font-size: 10px;
   }
 
