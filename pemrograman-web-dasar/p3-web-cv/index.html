@@ -75,7 +75,9 @@
 
   <main class="page-main">
     <section class="hero" id="overview" aria-labelledby="hero-title">
-      <div class="hero__image" aria-label="Profile picture placeholder">img</div>
+      <div class="hero__image" aria-label="Profile picture placeholder">
+        <img src="./public/images/main-photo.jpeg" alt="Profile Photo" />
+      </div>
 
       <div class="hero__content">
         <div class="hero__meta">
@@ -209,7 +211,7 @@
             <svg class="button__icon icon" aria-hidden="true"><use href="#icon-mail"></use></svg>
             ashandysp@gmail.com
           </a>
-          <button class="button button--secondary" type="button">
+          <button class="button button--secondary" id="copy-email-btn" type="button">
             <svg class="button__icon icon" aria-hidden="true"><use href="#icon-copy"></use></svg>
             Copy Email
           </button>
@@ -223,8 +225,8 @@
       <p class="site-footer__brand">Aries Shandy <span>Curriculum Vitae</span></p>
       <div class="site-footer__links">
         <a href="mailto:ashandysp@gmail.com">Email</a>
-        <a href="#">LinkedIn</a>
-        <a href="#">Github</a>
+        <a href="https://www.linkedin.com/in/aries-shandy-566931104/">LinkedIn</a>
+        <a href="https://github.com/ashandysp">Github</a>
       </div>
     </div>
     <p class="site-footer__copyright">&copy; 2026 Aries Shandy. All Rights Reserved.</p>
@@ -237,5 +239,28 @@
     <a class="mobile-nav__item" href="#expertise"><svg class="mobile-nav__icon icon" aria-hidden="true"><use href="#icon-sparkles"></use></svg>Skills</a>
     <a class="mobile-nav__item" href="#contact"><svg class="mobile-nav__icon icon" aria-hidden="true"><use href="#icon-mail"></use></svg>Contact</a>
   </nav>
+
+  <aside class="toast-alert" id="toast-alert" role="status" aria-live="polite">
+    <svg class="icon" aria-hidden="true" style="width: 16px; height: 16px; fill: currentColor;"><use href="#icon-sparkles"></use></svg>
+    <span>Email address copied!</span>
+  </aside>
+
+  <script>
+    const copyBtn = document.getElementById('copy-email-btn');
+    const toast = document.getElementById('toast-alert');
+    let toastTimeout;
+
+    copyBtn.onclick = () => {
+      navigator.clipboard.writeText('ashandysp@gmail.com');
+
+      if (toast) {
+        clearTimeout(toastTimeout);
+        toast.classList.add('is-visible');
+        toastTimeout = setTimeout(() => {
+          toast.classList.remove('is-visible');
+        }, 2500);
+      }
+    };
+  </script>
 </body>
 </html>
